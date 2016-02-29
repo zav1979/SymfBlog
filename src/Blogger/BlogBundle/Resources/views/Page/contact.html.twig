@@ -1,0 +1,28 @@
+{% extends 'BloggerBlogBundle::layout.html.twig' %}
+
+{% block title %}Контакты{% endblock%}
+
+{% block body %}
+	<header>
+		<h1>Контакты какого то блога</h1>
+	</header>
+
+	<p>Хочеш с нами связаться ?</p>
+
+	{{ form_start(form, {'attr': {'class': 'blogger'}}) }}
+
+		{{ form_errors(form) }}
+
+		{{ form_row(form.name, {'label': 'Имя:'}) }}
+		{{ form_row(form.email, {'label': 'Почтовый адрес:'}) }}
+		{{ form_row(form.subject, {'label': 'Тема:'}) }}
+		{{ form_row(form.body, {'label': 'Что пишем:'}) }}
+		{{ form_row(form.submit, {'label': 'Усе готово'}) }}
+
+		{{ form_rest(form) }}
+
+	{{ form_end(form) }}
+
+
+
+{% endblock %}

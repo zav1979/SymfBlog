@@ -1,0 +1,16 @@
+{# src/Blogger/BlogBundle/Resources/views/Comment/form.html.twig #}
+
+{{ form_start(form, {'attr': {'class': 'blogger'}}) }}
+
+	{{ form_row(form.user, {'label':'Скажи кто же ты есть такой'}) }}
+	{{ form_row(form.comment, {'label':'Ну и что ты нам можеш сказать'}) }}
+	{{ form_row(form.approved, {'label':'Approved какой то'}) }}
+	{{ form_row(form.created, {'label':'Когда сделали укажи'}) }}
+	{{ form_row(form.updated, {'label':'А тут когда меняли'}) }}
+	{{ form_row(form.blog, {'label':'Тута можно сменить запись для которой пишем'}) }}
+	{{ form_row(form.submit, {'label':'Все уже готово'}) }}
+
+	{{ form_widget(form) }}
+{{ form_end(form) }}
+
+
